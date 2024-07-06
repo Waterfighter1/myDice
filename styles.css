@@ -2,6 +2,11 @@ body {
     background-color: rgb(33, 10, 101)
 }
 
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
 /* Holder to center the die and create a background */
 .mainContent {
     width: 50%;
@@ -23,7 +28,7 @@ body {
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
-    transition: 1s ease;
+    transition: .5s ease;
     background-color: rgba(255, 255, 255, 0.25)
 }
 
@@ -98,7 +103,8 @@ body {
     transform: rotateX(180deg) translateZ(50px);
 }
 
-/*.dice {
+/*
+.dice {
     transform: rotateX(45deg) rotateY(235deg) rotateZ(0deg);
 } */
 
@@ -149,7 +155,7 @@ body {
                 50px 50px
 }
 
-#roll {
+.rollbtn {
     width: 100px;
     height: 50px;
     position: absolute;
@@ -162,6 +168,12 @@ body {
     transition: background-color .5s;
 }
 
-#roll:hover {
+.rollbtn:hover {
     background-color: rgb(178, 178, 178);
+}
+
+.rollTitle {
+    text-align: center;
+    color:rgb(231, 231, 231);
+    margin-top: 150px;
 }
