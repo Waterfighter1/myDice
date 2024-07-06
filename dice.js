@@ -5,12 +5,20 @@ const rollBtn = document.getElementById("roll");
 function startRoll(min = 1, max = 6) {
     // Generates a number 1 - 6 
     var random = getRandom(min,max);
+    displayFace(random);
+}
 
-   console.log("Rolled a " + random);
+/* const myTimeout = setTimeout(myGreeting, 5000); */
 
-   /* 1(0,0) 2(270,0) 3(0,90) 4(0,270) 5(90,0) 6(180,0)*/
+// Inclusive 
+function getRandom(min, max) {
+    return Math.floor((Math.random() * max) + min);
+}
 
-   switch(random) {
+function displayFace(faceNum) {
+     /* 1(0,0) 2(270,0) 3(0,90) 4(0,270) 5(90,0) 6(180,0)*/
+
+   switch(faceNum) {
     case 1:
         dice.style.transform = 'rotateX(0deg) rotateY(0deg)'
         break;
@@ -33,9 +41,4 @@ function startRoll(min = 1, max = 6) {
 
         break;
   }
-}
-
-// Inclusive 
-function getRandom(min, max) {
-    return Math.floor((Math.random() * max) + min);
 }
